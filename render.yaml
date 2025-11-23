@@ -3,8 +3,9 @@ services:
     name: evaluation-system-backend
     env: java
     region: oregon
-    buildCommand: cd backend && ./mvnw clean package -DskipTests
-    startCommand: cd backend && java -Dserver.port=$PORT -Dspring.profiles.active=prod -jar target/evaluation-system-1.0.0.jar
+    rootDir: backend
+    buildCommand: chmod +x mvnw && ./mvnw clean package -DskipTests
+    startCommand: java -Dserver.port=$PORT -Dspring.profiles.active=prod -jar target/evaluation-system-1.0.0.jar
     envVars:
       - key: JAVA_VERSION
         value: 17
