@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://tu-backend-url.railway.app/api'
+  apiUrl: 'https://evaluation-system-rieh.onrender.com/api'
 };
