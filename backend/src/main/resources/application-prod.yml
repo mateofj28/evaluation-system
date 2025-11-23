@@ -3,7 +3,7 @@ spring:
     name: evaluation-system
   
   datasource:
-    url: jdbc:h2:file:./data/evaluationdb
+    url: jdbc:h2:file:/opt/render/project/src/data/evaluationdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     driver-class-name: org.h2.Driver
     username: sa
     password: 
@@ -14,7 +14,7 @@ spring:
   
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     show-sql: false
     properties:
       hibernate:
