@@ -21,7 +21,7 @@ spring:
         format_sql: false
   
 server:
-  port: 5000
+  port: ${PORT:5000}
 
 jwt:
   secret: mySecretKeyForJWTTokenGenerationAndValidation123456789ProductionKey2024

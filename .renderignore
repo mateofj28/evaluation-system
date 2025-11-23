@@ -1,0 +1,6 @@
+frontend/
+.git/
+.vscode/
+*.md
+deploy.sh
+deploy.bat
