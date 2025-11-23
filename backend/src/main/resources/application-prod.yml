@@ -28,4 +28,4 @@ jwt:
   expiration: 86400000
 
 cors:
-  allowed-origins: "*"
+  allowed-origins: "https://evaluation-system-nine.vercel.app,http://localhost:4200"
