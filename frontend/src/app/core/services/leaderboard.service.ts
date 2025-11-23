@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Leaderboard } from '../models/leaderboard.model';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LeaderboardService {
-  private apiUrl = 'http://localhost:8080/api/leaderboard';
+  private apiUrl = `${environment.apiUrl}/leaderboard`;
 
   constructor(private http: HttpClient) {}
 

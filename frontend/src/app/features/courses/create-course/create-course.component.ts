@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { CardComponent } from '../../../design-system/atoms/card/card.component';
 import { ButtonComponent } from '../../../design-system/atoms/button/button.component';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-create-course',
@@ -299,7 +300,7 @@ export class CreateCourseComponent {
   }
 
   loadBadges() {
-    this.http.get<any[]>('http://localhost:8080/api/badges').subscribe(
+    this.http.get<any[]>(`${environment.apiUrl}/badges`).subscribe(
       badges => this.badges = badges
     );
   }
@@ -347,7 +348,7 @@ export class CreateCourseComponent {
     this.loading = true;
     this.message = '';
 
-    this.http.post('http://localhost:8080/api/courses/with-modules', this.course).subscribe({
+    this.http.post(`${environment.apiUrl}/courses/with-modules`, this.course).subscribe({
       next: (response) => {
         this.loading = false;
         this.message = '¡Curso creado exitosamente!';
