@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 public class EvaluationResultDTO {
     private Integer correctAnswers;
     private Integer totalQuestions;
-    private Integer pointsEarned;
+    private Boolean pointsEarned;
     private Integer maxPoints;
     private Double percentage;
     private Boolean passed;
